@@ -1,0 +1,114 @@
+.cart-button{
+  width: 56px;
+  height: 56px;
+  position: fixed;
+  aspect-ratio: 1;
+  top: 1rem;
+  right: 1rem;
+  background-color: #00ABB3;
+  padding: .8rem;
+  border-radius: 100%;
+  z-index: 5;
+  & .cart-switch{
+    z-index: 6;
+  }
+}
+aside{
+  overflow: scroll;
+  display: none;
+  width: 25%;
+  min-width: 280px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #3C4048;
+  box-sizing: border-box;
+  border-left: 6px solid #00ABB3 ;
+  & h2{
+    width: 25%;
+    min-width: 280px;
+    position: fixed;
+    background-color: #3C4048;
+    padding: 2rem;
+    z-index: 4;
+  }
+  & ul{
+    margin-top: 6rem;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    & li{
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      background-color: #00ABB3;
+      position: relative;
+      gap: 1rem;
+      
+      & img{
+        width: 50%;
+        
+      }
+      & div {
+        width: 50%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        & p{
+          color: #3C4048;
+          background-color: transparent;
+          margin: 0;
+          font-weight: 800;
+          font-size: 1rem;
+          & span{
+            color: #3C4048;
+            background-color: transparent;
+          }
+        }
+        & .footer{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: static;
+          gap: .3rem;
+          border-radius: 0;
+          padding: 0;
+          background-color: transparent;
+          & p{
+            background-color: transparent;
+          }
+          & button{
+            width: 22.5px;
+            background-color: #3C4048;
+            border: none;
+            padding: 0;
+            padding-bottom: 4px;
+            font-size: 1.2rem;
+            aspect-ratio: 1;
+            position: static;
+            margin: 0;
+            line-height: 0;
+            border-radius: 2px;
+          }
+          
+        }
+      }
+    }
+  }
+  & button {
+    width: 90%;
+    background-color: #00ABB3;
+    padding: 1rem;
+    border: none;
+    margin: 1rem auto;
+    border-radius: 1rem ;
+
+  }
+}
+.cart-button ~ .cart-switch:checked ~ aside{
+  display: block;
+}
